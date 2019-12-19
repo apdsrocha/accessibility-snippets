@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Accessibility snippets</title>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism.min.css"
+  />
+</head>
+<body>
+  <h1>Accessibility snippets</h1>
+  <h2>Buttons</h2>
+  <h3>Important to think about:</h3>
+  <ul>
+    <li>Can the keyboard reach the buttons?</li>
+    <li>Can the screen reader reach the buttons?</li>
+  </ul>
+  <h4>Example:</h4>
+    <button>
+			<span class="visuallyhidden">Help!</span>
+			<i class="icon icon-help" aria-hidden="true"></i>
+    </button>
+
+    <p>Notes:</p>
+    <p>Using the "button" tag out of the box is the best way to go whenever possible. </p>
+    <p>To add labels, it's a good idea to add a visually hidden element.</p>
+
+    <h4>Code:</h4>
+    <pre>
+        <code class="language-markup">
+          &lt;button&gt;
+            &lt;span class=&quot;visuallyhidden&quot;&gt;Help!&lt;/span&gt;
+            &lt;i class=&quot;icon icon-help&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+          &lt;/button&gt;
+        </code>
+    </pre>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
+</body>
+</html>
