@@ -26,7 +26,7 @@
 
     <p>Notes:</p>
     <p>Using the "button" tag out of the box is the best way to go whenever possible. </p>
-    <p>To add labels, it's a good idea to add a visually hidden element.</p>
+    <p>To add labels, it's a good idea to add a visually hidden element (i.e.: a span tag with a class that sets visually hidden css settings)</p>
 
     <h4>Code:</h4>
     <pre>
@@ -35,6 +35,19 @@
             &lt;span class=&quot;visuallyhidden&quot;&gt;Help!&lt;/span&gt;
             &lt;i class=&quot;icon icon-help&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
           &lt;/button&gt;
+        </code>
+
+        <code class="language-css">
+            .visuallyhidden {
+              border: 0;
+              clip: rect(0 0 0 0);
+              height: 1px;
+              margin: -1px;
+              overflow: hidden;
+              padding: 0;
+              position: absolute;
+              width: 1px;
+            }
         </code>
     </pre>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
