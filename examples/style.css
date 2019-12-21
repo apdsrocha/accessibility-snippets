@@ -1,0 +1,57 @@
+/* Index 
+1. General Settings
+2. Body
+*/
+
+/* 1. General Settings */
+
+
+body {
+  font-family: 'Muli', sans-serif;
+  max-width: 1160px;
+  margin: auto;
+}
+
+button, .button {
+  width: 150px;
+  height: 60px;
+  border: solid 2px #f9f9f9;
+  background-color: #ffffff;
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(233,233,233,1);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(233,233,233,1);
+  box-shadow: 5px 5px 5px 0px rgba(233,233,233,1);
+  cursor: pointer;
+}
+button:focus {
+  border: solid 2px blue;
+}
+.responsive {
+  width: 100%;
+  height: auto;
+}
+.bold {
+  font-weight: bold;
+}      
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* 2. Body */
+.info-box {
+  display: flex;
+}
+.info-box__individual {
+  margin: 2% 5%;
+}
+.fa-question-circle {
+  font-size: 40px;
+  color:
+  purple;
+}
