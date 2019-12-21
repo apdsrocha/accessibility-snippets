@@ -9,21 +9,40 @@
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism.min.css"
   />
+  <link 
+  href="https://fonts.googleapis.com/css?family=Muli:400,700,900&display=swap" 
+  rel="stylesheet"> 
+  <link
+  rel="stylesheet"
+  href="style.css"
+  />
+  <script src="https://kit.fontawesome.com/3617af509b.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
   <h1>Accessibility snippets</h1>
   <h2>Buttons</h2>
-  <h3>Important to think about:</h3>
-  <ul>
-    <li>Can the keyboard reach the buttons?</li>
-    <li>Can the screen reader reach the buttons?</li>
-  </ul>
-  <h4>Example:</h4>
-    <button>
-			<span class="visuallyhidden">Help!</span>
-			<i class="icon icon-help" aria-hidden="true"></i>
-    </button>
-
+  <div class="info-box">
+    <div class="info-box__individual">
+      <h3>Important to think about:</h3>
+      <ul>
+        <li>Can the keyboard reach the buttons?</li>
+        <li>Can the screen reader reach the buttons?</li>
+      </ul>
+    </div>
+    <div class="info-box__individual">
+      <h4>Examples:</h4>
+        <button>
+          Help!
+        </button>
+        <p>This one's fine. It uses a tag and the label is readable.</p>
+        <button>
+          <span class="visuallyhidden">Help!</span>
+          <i class="fas fa-question-circle" aria-hidden="true"></i>
+        </button>
+        <p>This one uses a visually hidden element to give the screen reader a label. There's also an aria-hidden element of true because the icon is not important to the screen reader.</p>
+      </div>
+  </div>
     <p>Notes:</p>
     <p>Using the "button" tag out of the box is the best way to go whenever possible. </p>
     <p>To add labels, it's a good idea to add a visually hidden element (i.e.: a span tag with a class that sets visually hidden css settings)</p>
@@ -33,7 +52,7 @@
         <code class="language-markup">
           &lt;button&gt;
             &lt;span class=&quot;visuallyhidden&quot;&gt;Help!&lt;/span&gt;
-            &lt;i class=&quot;icon icon-help&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+            &lt;i class=&quot;fas fa-question-circle&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
           &lt;/button&gt;
         </code>
 
@@ -49,6 +68,33 @@
               width: 1px;
             }
         </code>
+    </pre>
+    <div class="info-box">
+        <div class="info-box__individual">
+            <h3>If you have to use a div</h3>
+            <ul>
+                <li>Add a role of button (to tell the screen reader what this element is for) </li>
+                <li> Also add a tabindex of 0, so it'll be kept in original tab order.</li>
+                <li>Can the screen reader reach the buttons?</li>
+              </ul>
+          </div>
+          <div class="info-box__individual">
+            <h4>Examples:</h4>
+              <div class="button" role="button" tabindex="0">
+                  <span class="visuallyhidden">Help!</span>
+                  <i class="fas fa-question-circle" aria-hidden="true"></i>
+              </div>
+            </div>
+    </div>
+    <h4>Code:</h4>
+    <pre>
+        <code class="language-markup">
+          &lt;div class="button" role="button" tabindex="0"&gt;
+            &lt;span class=&quot;visuallyhidden&quot;&gt;Help!&lt;/span&gt;
+            &lt;i class=&quot;fas fa-question-circle&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+          &lt;/div&gt;
+        </code>
+
     </pre>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 </body>
