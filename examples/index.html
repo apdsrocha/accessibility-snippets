@@ -94,8 +94,83 @@
             &lt;i class=&quot;fas fa-question-circle&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
           &lt;/div&gt;
         </code>
-
     </pre>
+  
+  <h2>Accessible Form</h2>
+  <div class="info-box">
+    <div class="info-box__individual">
+        <h3>Important to think about:</h3>
+        <ul>
+          <li>If you use html forms correctly you should be fine.</li>
+          <li>By using the label tag you make sure your label and input are grouped together and understood by the screen reader.</li>
+        </ul>
+    </div>
+    <div class="info-box__individual">
+        <h3>Example:</h3>
+
+	    <form action="">
+        <label>
+          Your name
+          <input type="text">
+        </label>
+  
+        <fieldset>
+          <legend>Favorite animal</legend>
+          <div>
+            <label>
+              <input type="radio" name="animals">
+              Dog
+            </label>
+          </div>
+          <div>
+            <label>
+              <input type="radio" name="animals">
+              Cat
+            </label>
+          </div>
+          <div>
+            <label>
+              <input type="radio" name="animals">
+              Polar bear
+            </label>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <h4>Code:</h4>
+  <pre>
+      <code class="language-markup">
+          &lt;form action=&quot;&quot;&gt;
+          &lt;label&gt;
+            Your name
+            &lt;input type=&quot;text&quot;&gt;
+          &lt;/label&gt;
+    
+          &lt;fieldset&gt;
+            &lt;legend&gt;Favorite animal&lt;/legend&gt;
+            &lt;div&gt;
+              &lt;label&gt;
+                &lt;input type=&quot;radio&quot; name=&quot;animals&quot;&gt;
+                Dog
+              &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+              &lt;label&gt;
+                &lt;input type=&quot;radio&quot; name=&quot;animals&quot;&gt;
+                Cat
+              &lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+              &lt;label&gt;
+                &lt;input type=&quot;radio&quot; name=&quot;animals&quot;&gt;
+                Polar bear
+              &lt;/label&gt;
+            &lt;/div&gt;
+          &lt;/fieldset&gt;
+        &lt;/form&gt;
+      </code>
+  </pre>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 </body>
 </html>
