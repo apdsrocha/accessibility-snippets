@@ -1,6 +1,6 @@
 # accessibility-snippets
 
->I wanted a place where I could write down snippets and notes on fixing accessibility issues.
+## A place where I write down snippets and notes on fixing accessibility issues.
 
 **[Here's the file for easier viewing](https://apdsrocha.github.io/accessibility-snippets/examples/index.html)**
 
