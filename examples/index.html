@@ -96,6 +96,38 @@
         </code>
     </pre>
   
+    <h2>Button events</h2>
+    <div class="info-box">
+        <div class="info-box__individual">
+            <ul>
+                <li>A regular button element can trigger events from the keyboard, but if you're using a div, you'll need extra steps.</li>
+                <li>First fix the div: add a role of button (to tell the screen reader what this element is for) and a tabindex. </li>
+                <li>The moment you add an event to an element, think about where you're placing it and how you're gonna make it accessible.</li>
+              </ul>
+        </div>
+        <div class="info-box__individual">
+            <h4>Examples:</h4>
+            <div class="button" role="button" tabindex="0" aria-label="Menu" onclick="doStuff()" onkeydown="doStuff()">
+              <i class="fas fa-bars" aria-hidden="true"></i>
+            </div>
+            <p>Just adding the event doesn't trigger anything because divs don't fire events like interactive tags, so you'll also need to add a key down event.  </p>
+          </div>
+        </div>
+    </div>
+    <h4>Code:</h4>
+    <pre>
+        <code class="language-markup">
+          &lt;div class=&quot;button&quot; role=&quot;button&quot; tabindex=&quot;0&quot; aria-label=&quot;Menu&quot; onclick=&quot;doStuff()&quot; onkeydown=&quot;doStuff()&quot;&gt;
+            &lt;i class=&quot;fas fa-bars&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+          &lt;/div&gt;
+        </code>
+        <code class="language-js">
+            function doStuff() {
+              alert('yay')
+            }
+        </code>
+    </pre>
+  
   <h2>Accessible Form</h2>
   <div class="info-box">
     <div class="info-box__individual">
@@ -171,6 +203,13 @@
         &lt;/form&gt;
       </code>
   </pre>
+
+<script>
+function doStuff() {
+  alert('yay')
+}
+</script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/prism.min.js"></script>
 </body>
 </html>
